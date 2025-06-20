@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home - Merji Store Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+  <h4 id="greeting" style="margin: 0; font-size: 1em;">Hallo, User</h4>
+  <button onclick="logout()" style="padding: 4px 8px; font-size: 0.7em; border-radius: 5px; background:#ccc; display:inline-block; width:auto;">Logout</button>
+</div>
+    <a href="produk.html"><button style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 10px;">Paket Hostingner</button></a>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const nama = localStorage.getItem("nama");
+    if (nama) {
+      document.getElementById("greeting").innerText = "Hallo, " + nama;
+    }
+  </script>
+
+  <footer style="text-align:center; margin-top: 40px; font-size: 0.9em; color: #555;">
+    © 2025 Copyright Merji Developer
+  </footer>
+</body>
+</html>

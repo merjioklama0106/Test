@@ -1,0 +1,76 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f4ff;
+  color: #222;
+}
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+a { color: #007bff; cursor: pointer; }
+
+.custom-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.custom-toast.show {
+  opacity: 1;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-height: 60px;
+  font-family: sans-serif;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating i {
+  font-style: normal;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #ccc;
+}
+.star-rating input:checked ~ i,
+.star-rating input:checked + i {
+  color: gold;
+}
