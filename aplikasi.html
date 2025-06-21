@@ -135,30 +135,7 @@
       window.location.href = whatsappLink;
     });
   </script>
-<script>
-  document.querySelectorAll(".product-card").forEach(function(card) {
-    card.addEventListener("click", function() {
-      const name = card.querySelector(".product-title").innerText;
-      const desc = card.querySelector(".product-desc").innerText;
-      const price = card.querySelector(".product-price").innerText;
 
-      document.getElementById("modalProductName").innerText = name;
-      document.getElementById("modalProductDesc").innerText = desc;
-      document.getElementById("modalProductPrice").innerText = price;
-
-      document.getElementById("orderModal").style.display = "block";
-    });
-  });
-
-  function closeModal() {
-    document.getElementById("orderModal").style.display = "none";
-  }
-
-  document.getElementById("orderNowBtn").addEventListener("click", function() {
-    alert("Silakan lanjutkan pemesanan via WhatsApp.");
-    closeModal();
-  });
-</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("orderModal");
