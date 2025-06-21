@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><span class="judul">Daftar Paket Hostingner</span></title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title><span class="judul">Daftar Paket Hostingner</span></title>
+<link href="style.css" rel="stylesheet"/>
+<style>
     .product-card {
       display: flex;
       align-items: center;
@@ -75,61 +76,53 @@
       color: white;
     }
   </style>
-
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <p><strong>Produk:</strong> <span id="modalProductName"></span></p>
-    <p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
-    <p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
-    <button id="orderNowBtn" class="order-btn" style="background-color: #28a745; color: white;">Order</button>
-    <button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
-  </div>
+<div class="modal" id="orderModal">
+<div class="modal-content">
+<p><strong>Produk:</strong> <span id="modalProductName"></span></p>
+<p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
+<p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
+<button class="order-btn" id="orderNowBtn" style="background-color: #28a745; color: white;">Order</button>
+<button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
 </div>
-
+</div>
 </head>
 <body>
-  <a href="home.html" style="display:inline-block; margin: 20px; font-weight: bold; text-decoration: none; background-color:#007bff; color:white; padding:10px 15px; border-radius:8px;">&larr; Back Home</a>
-  <h2 style="text-align:center; font-family: cursive;"><span class="judul">Daftar Paket Hostingner</span></h2><style>.judul { font-size: 28px; font-weight: bold; color: #333; font-family: Arial, sans-serif; }</style>
-
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <p><strong>Produk:</strong> <span id="modalProductName"></span></p>
-    <p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
-    <p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
-    <button id="orderNowBtn" class="order-btn" style="background-color: #28a745; color: white;">Order</button>
-    <button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
-  </div>
+<a href="home.html" style="display:inline-block; margin: 20px; font-weight: bold; text-decoration: none; background-color:#007bff; color:white; padding:10px 15px; border-radius:8px;">← Back Home</a>
+<h2 style="text-align:center; font-family: cursive;"><span class="judul">Daftar Paket Hostingner</span></h2><style>.judul { font-size: 28px; font-weight: bold; color: #333; font-family: Arial, sans-serif; }</style>
+<div class="modal" id="orderModal">
+<div class="modal-content">
+<p><strong>Produk:</strong> <span id="modalProductName"></span></p>
+<p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
+<p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
+<button class="order-btn" id="orderNowBtn" style="background-color: #28a745; color: white;">Order</button>
+<button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
 </div>
-
-
-  <div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Bronze')">
-    <img src="img/bronze.png" alt="bronze" />
-    <div class="product-info">
-      <span class="product-title">Hosting Bronze</span>
-      <span class="product-desc">Hosting Bronze (Perbulan)</span>
-      <span class="product-price">Rp 10.000</span>
-    </div>
-  </div>
-
-  <div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Basic')">
-    <img src="img/basic.png" alt="basic" />
-    <div class="product-info">
-      <span class="product-title">Hosting Basic</span>
-      <span class="product-desc">Hosting Basic (Perbulan)</span>
-      <span class="product-price">Rp 25.000</span>
-    </div>
-  </div>
-
-  <div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Premium')">
-    <img src="img/premium.png" alt="premium" />
-    <div class="product-info">
-      <span class="product-title">Hosting Premium</span>
-      <span class="product-desc">Hosting Premium (Perbulan)</span>
-      <span class="product-price">Rp 50.000</span>
-    </div>
-  </div>
-
-  <script>
+</div>
+<div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Bronze')">
+<img alt="bronze" src="img/bronze.png"/>
+<div class="product-info">
+<span class="product-title">Hosting Bronze</span>
+<span class="product-desc">Hosting Bronze (Perbulan)</span>
+<span class="product-price">Rp 10.000</span>
+</div>
+</div>
+<div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Basic')">
+<img alt="basic" src="img/basic.png"/>
+<div class="product-info">
+<span class="product-title">Hosting Basic</span>
+<span class="product-desc">Hosting Basic (Perbulan)</span>
+<span class="product-price">Rp 25.000</span>
+</div>
+</div>
+<div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Hosting%20Premium')">
+<img alt="premium" src="img/premium.png"/>
+<div class="product-info">
+<span class="product-title">Hosting Premium</span>
+<span class="product-desc">Hosting Premium (Perbulan)</span>
+<span class="product-price">Rp 50.000</span>
+</div>
+</div>
+<script>
     let whatsappLink = "";
     function showPopup(link) {
       whatsappLink = link;
@@ -142,7 +135,6 @@
       window.location.href = whatsappLink;
     });
   </script>
-
 <script>
   document.querySelectorAll(".product-card").forEach(function(card) {
     card.addEventListener("click", function() {
@@ -167,5 +159,48 @@
     closeModal();
   });
 </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("orderModal");
+  const nameEl = document.getElementById("modalProductName");
+  const descEl = document.getElementById("modalProductDesc");
+  const priceEl = document.getElementById("modalProductPrice");
+  const orderBtn = document.getElementById("orderNowBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
+
+  let selectedName = "";
+  let selectedPrice = "";
+
+  document.querySelectorAll(".product-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      selectedName = card.querySelector(".product-title")?.innerText || "";
+      const desc = card.querySelector(".product-desc")?.innerText || "";
+      selectedPrice = card.querySelector(".product-price")?.innerText || "";
+
+      nameEl.innerText = selectedName;
+      descEl.innerText = desc;
+      priceEl.innerText = selectedPrice;
+
+      modal.style.display = "block";
+    });
+  });
+
+  orderBtn.onclick = function () {
+    const message = `Halo, saya ingin order produk: ${selectedName} - Harga: ${selectedPrice}`;
+    const waUrl = `https://wa.me/628979687563?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, "_blank");
+    modal.style.display = "none";
+  };
+
+  cancelBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+</script></body>
 </html>
