@@ -75,25 +75,39 @@
       color: white;
     }
   </style>
+
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <p><strong>Produk:</strong> <span id="modalProductName"></span></p>
+    <p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
+    <p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
+    <button id="orderNowBtn" class="order-btn" style="background-color: #28a745; color: white;">Order</button>
+    <button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
+  </div>
+</div>
+
 </head>
 <body>
   <a href="home.html" style="display:inline-block; margin: 20px; font-weight: bold; text-decoration: none; background-color:#007bff; color:white; padding:10px 15px; border-radius:8px;">&larr; Back Home</a>
   <h2 style="text-align:center; font-family: cursive;"><span class="judul">Daftar Paket Domain</span></h2><style>.judul { font-size: 28px; font-weight: bold; color: #333; font-family: Arial, sans-serif; }</style>
 
-  <div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%201')">
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <p><strong>Produk:</strong> <span id="modalProductName"></span></p>
+    <p><strong>Deskripsi:</strong> <span id="modalProductDesc"></span></p>
+    <p><strong>Harga:</strong> <span id="modalProductPrice"></span></p>
+    <button id="orderNowBtn" class="order-btn" style="background-color: #28a745; color: white;">Order</button>
+    <button onclick="closeModal()" style="background-color: #dc3545; color: white;">Tidak</button>
+  </div>
+</div>
+
+
+  <div class="product-card" onclick="showPopup('https://wa.me/628979687563?text=Saya%20mau%20order%20Produk%20Domain%20my.id')">
     <img src="img/domain1.png" alt="domain1" />
     <div class="product-info">
       <span class="product-title">Domain my.id</span>
       <span class="product-desc">Domain my.id (Pertahun)</span>
       <span class="product-price">Rp 20.000</span>
-    </div>
-  </div>
-
-  <div id="popup" class="modal">
-    <div class="modal-content">
-      <p>Ingin melakukan pemesanan via WhatsApp?</p>
-      <button class="order-btn" id="orderNow">Order</button>
-      <button class="cancel-btn" onclick="hidePopup()">Batal</button>
     </div>
   </div>
 
@@ -110,5 +124,30 @@
       window.location.href = whatsappLink;
     });
   </script>
+
+<script>
+  document.querySelectorAll(".product-card").forEach(function(card) {
+    card.addEventListener("click", function() {
+      const name = card.querySelector(".product-title").innerText;
+      const desc = card.querySelector(".product-desc").innerText;
+      const price = card.querySelector(".product-price").innerText;
+
+      document.getElementById("modalProductName").innerText = name;
+      document.getElementById("modalProductDesc").innerText = desc;
+      document.getElementById("modalProductPrice").innerText = price;
+
+      document.getElementById("orderModal").style.display = "block";
+    });
+  });
+
+  function closeModal() {
+    document.getElementById("orderModal").style.display = "none";
+  }
+
+  document.getElementById("orderNowBtn").addEventListener("click", function() {
+    alert("Silakan lanjutkan pemesanan via WhatsApp.");
+    closeModal();
+  });
+</script>
 </body>
 </html>
